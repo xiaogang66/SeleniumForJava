@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<!-- 失败重跑监听 -->
+		<listener class-name="lyg.listener.IInvokedMethodListenerImp" />
+		<listener class-name="lyg.listener.RetryListener" />
+		<listener class-name="lyg.listener.TestCountListener" />
+		<listener class-name="lyg.listener.TestFailureScreenShot" />
+	</listeners>
+	
+	<test name="Test">
+	  <classes>
+	    <class name="lyg.cases.LoginCase"/>
+	  </classes>
+	</test> <!-- 测试用例 -->
+</suite> <!-- 测试集 -->
