@@ -51,6 +51,10 @@ public class BaseManager {
 		return driver;
 	}
 	
+	/**
+	 * @Description:返回logger对象供失败截屏类中记录日志时调用
+	 *  @return	logger日志对象
+	 */
 	public static Logger getLogger(){
 		return logger;
 	}
