@@ -16,12 +16,13 @@ import org.testng.annotations.BeforeSuite;
  * @date: 2019年9月10日 下午7:56:20
  */
 public class BaseCase extends BaseManager{
+	BasePage basePage=new BasePage();
 	
 	@BeforeSuite
 	public void prepare() throws Exception{
 		//测试之前打开浏览器
 		String baseUrl = PropertieUtil.getValueByKey("base_url");
-		driver.get(baseUrl);
+		basePage.get(baseUrl);
 	}
 	
 	@BeforeClass
@@ -40,13 +41,13 @@ public class BaseCase extends BaseManager{
 	@AfterClass
 	public void logAfterClass(){
 		//执行完测试类之后回到首页
-		BasePage.refresh();
+		basePage.refresh();
 	}
 	
 	@AfterSuite
 	public void cleanup() throws Exception{
 		//测试完毕退出并关闭浏览器
-		driver.close();
+		basePage.close();
 	}
 	
 }
