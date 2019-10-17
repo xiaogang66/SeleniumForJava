@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="lyg.listener.IInvokedMethodListenerImp"/>
+    <listener class-name="lyg.listener.RetryListener"/>
+    <listener class-name="lyg.listener.TestCountListener"/>
+    <listener class-name="lyg.listener.TestFailureScreenShot"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="lyg.cases.LoginCase">
+        <methods>
+          <include name="logBeforeClass"/>
+          <include name="logAfterClass"/>
+          <include name="cleanup"/>
+          <include name="testLogin"/>
+          <include name="prepare"/>
+        </methods>
+      </class> <!-- lyg.cases.LoginCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

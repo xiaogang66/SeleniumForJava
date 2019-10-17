@@ -25,7 +25,14 @@ public class BasePage extends BaseManager{
 	
 	public JavascriptExecutor jsExecutor=(JavascriptExecutor) driver;
 	public Actions actions=new Actions(driver);
-	public static Robot robot = new Robot();
+	public static Robot robot;
+	static {
+		try {
+			robot = new Robot();
+		} catch (AWTException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	/**
 	 *
