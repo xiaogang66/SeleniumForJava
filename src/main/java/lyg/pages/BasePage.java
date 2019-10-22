@@ -471,6 +471,24 @@ public class BasePage extends BaseManager{
 	}
 	
 	/**
+	 * 拖拽按钮至目标元素
+	 *  @param element
+	 */
+	public void dragByElement(WebElement sourceElement,WebElement targetElement){
+		actions.dragAndDrop(sourceElement, targetElement);
+	}
+	
+	/**
+	 * 拖拽按钮至指定坐标位置
+	 *  @param sourceElement
+	 *  @param xOffset
+	 *  @param yOffset
+	 */
+	public void dragByOffset(WebElement sourceElement,int xOffset,int yOffset){
+		actions.dragAndDropBy(sourceElement, xOffset, yOffset);
+	}
+	
+	/**
 	 * 利用js点击
 	 * @param element	执行点击操作的页面对象
 	 */
