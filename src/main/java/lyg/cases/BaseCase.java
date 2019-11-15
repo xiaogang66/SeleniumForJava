@@ -41,7 +41,7 @@ public class BaseCase extends BaseManager{
 	@AfterClass
 	public void logAfterClass(){
 		//执行完测试类之后回到首页
-		basePage.refresh();
+		basePage.defaultContent();
 	}
 	
 	@AfterSuite
